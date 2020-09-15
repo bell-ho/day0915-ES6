@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Document 메소드 querySelectorAll() 는 지정된 셀렉터 그룹에 일치하는
+      //다큐먼트의 엘리먼트 리스트를 나타내는 정적(살아 있지 않은) NodeList 를 반환합니다.
+      
+      var list = document.querySelectorAll('li');
+      console.log(list);
+      for (var i = 0; i < list.length; i++) { 
+        list[i].addEventListener("click", function () {
+          console.log(i + "번째 리스트 입니다");
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>자바스트립트</li>
+      <li>자바</li>
+      <li>파이썬</li>
+      <li>장고</li>
+    </ul>
+  </body>
+</html>
