@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var data = [1, 2, undefined, NaN, null, ""];
+
+      Array.prototype.getIndex = function () {};
+
+      for (var i = 0; i < data.length; i++) {
+        console.log(i + ": " + data[i]);
+      }
+
+      data.forEach(function (value) {
+        console.log("forEach value : " + value);
+      });
+
+      for (let i in data) {
+        //for in을 Array에선 쓰면안됨
+        console.log("for in : " + data[i]); //i번째에 있는 value 값 추출
+      }
+
+      for (let value of data) {
+        // console.log("for of : " + value); //of는 바로 value값 추출
+      }
+
+      var str = "hello 안녕안녕";
+      for (let value of str) {
+        console.log(value);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
