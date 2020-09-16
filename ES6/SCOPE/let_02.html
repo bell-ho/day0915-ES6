@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            // var list = document.querySelectorAll("li");
+            var list = document.getElementsByTagName("li");
+
+            for (let i = 0; i < list.length; i++) {
+                list[i].addEventListener("click", function () {
+                    console.log(i + "번째 리스트"); //var로 뽑으면 계속 3번째가 나옴 
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>자바</li>
+        <li>스크립트</li>
+        <li>리액트</li>
+    </ul>
+</body>
+
+</html>
