@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+
+        function home() {
+          const list = ["사과", "유우", "포도"];
+          list.push("adddd");
+
+          //const를 사용하더라도 배열과 오브젝트의 값을 변경하는 것은 가능하다
+          console.log(list);
+        }
+        const list = ["사과", "유우", "포도"];
+        list2 = [].concat(list, "banana");  //concat() 기존 배열에 원소 또는 배열을 추가하여 새배열을 만듬
+        console.log(list,list2);
+        // home();
+        console.log(list === list2);
+      };
+    </script>
+  </head>
+
+  <body></body>
+</html>

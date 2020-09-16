@@ -8,16 +8,19 @@
     <script>
         window.onload = function () {
             // var list = document.querySelectorAll("li");
-            var list = document.getElementsByTagName("li");
+            var list = document.getElementsByTagName("li"); //3
 
             for (let i = 0; i < list.length; i++) {
                 list[i].addEventListener("click", function () {
-                    console.log(i + "번째 리스트"); //var로 뽑으면 계속 3번째가 나옴
+
+                    console.log(i + "번째 리스트"); //콜백(function)은 나중에 실행되기 때문에 i값(list의 수인 3)은 콜백 밖에있는 변수 값을 참조함
+                                                    //var로 뽑으면 계속 3번째가 나옴
                                                     //java로 치면 var는 전역변수 let은 지역변수 const는 상수
                 });
             }
         }
     </script>
+
 </head>
 
 <body>
