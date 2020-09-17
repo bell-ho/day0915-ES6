@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let pre = [100, 200, "hi", null];
+      // let newData = [0, 1, 2, 3, ...pre, 4];
+      // console.log(newData);
+
+      function sum(a, b, c) {
+        return a + b + c;
+      }
+
+      let pre = [100, 200, 300];
+      console.log(sum.apply(null, pre)); //null인자값은 this를 대신한다, 배열 그대로 전해줄때
+      console.log(sum(...pre)); //쉬운방법 펼쳐서 주면됨
+    </script>
+  </head>
+  <body></body>
+</html>

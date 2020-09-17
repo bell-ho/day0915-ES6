@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //filter , includes , from을 사용해서 문자열 e가 포함되고 노드로 구성된 배열을 만들어서 반환하라
+      window.onload = function () {
+        var list = document.querySelectorAll("li");
+        var listArray = Array.from(list);
+        console.log(toString.call(listArray));  //array로 변함
+
+        var data = document.getElementsByTagName("li");
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].textContent.includes("e") == true) {
+            console.log(data[i].textContent);
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>apple</li>
+      <li>orange</li>
+      <li>banana</li>
+      <li>strawberry</li>
+    </ul>
+  </body>
+</html>
