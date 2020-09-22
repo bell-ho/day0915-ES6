@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var news = [
+        {
+          title: "sbs",
+          imgurl: "https://newsimg.sedaily.com/2020/09/21/1Z7XWMPZKH_1.jpg",
+          newsList: ["dddddd", "aaaaaa", "acccccc"],
+        },
+      ];
+
+      var img = document.getElementsByTagName("img");
+      document.write("<img src='https://newsimg.sedaily.com/2020/09/21/1Z7XWMPZKH_1.jpg'>"); //이미지 태그안에 주소는 홑따옴표로
+
+      let [sbs] = news;
+      document.write(sbs.imgurl);
+      console.log(sbs);
+
+      let { title, imgurl } = sbs;
+      console.log(title, imgurl);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
