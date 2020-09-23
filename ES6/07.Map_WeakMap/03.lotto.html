@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1.유일한 값을 추출하는 과정에서 set 사용
+      //2.getRandomNumber함수에 변수를 전달하는 과정에서 destructuring 사용
+      const SETTING = {
+        name: "럭키 로또!",
+        count: 6,
+        maxNumber: 45,
+      };
+
+      var mylotto = new Set();
+
+      let count = SETTING.count;
+      let maxNumber = SETTING.maxNumber;
+      let name = SETTING.name;
+
+      function getRandomNumber(maxNumber) {
+        for (let i = 0; i < count; i++) {
+          mylotto.add(Math.floor(Math.random() * maxNumber) + 1);
+        }
+      }
+
+      getRandomNumber(maxNumber); //함수 호출
+
+      mylotto.forEach(function (value) {
+        document.write(value, "<br>");
+      });
+      
+    </script>
+  </head>
+  <body></body>
+</html>

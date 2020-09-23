@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //map & WeakMap
+      //Array -> set , weakset
+      //object -> map, weakmap
+
+      //map은 key/value
+
+      let wm = new WeakMap();
+
+      //이 함수가 얼마나 실행됐는지를 알고 싶을때
+      let myfun = function () {};
+
+      wm.set(myfun, 0);
+
+      let count = 0;
+      for (let i = 0; i < 10; i++) {
+        count = wm.get(myfun);
+        count++;
+        wm.set(myfun, count);
+      }
+      console.log(wm.get(myfun));
+      myfun = null;
+      console.log(wm.get(myfun));
+    </script>
+  </head>
+  <body></body>
+</html>

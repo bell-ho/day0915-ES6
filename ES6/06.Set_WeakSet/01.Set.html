@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let mySet = new Set();
+      console.log(toString.call(mySet));
+
+      mySet.add("a");
+      mySet.add("b");
+      mySet.add("c");
+      mySet.add("a");
+
+      mySet.delete("a");
+
+      mySet.forEach(function (value) {
+        console.log(value);
+      });
+
+      console.log(mySet.has("a")); //has : mySet이 a를 가지고 있나
+    </script>
+  </head>
+  <body></body>
+</html>
