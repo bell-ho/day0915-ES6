@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        const data = [
+          {
+            name: "coffee-bean",
+            order: true,
+            items: ["아메리카노", "우유", "녹차"],
+          },
+          {
+            name: "스타벅스",
+            order: false,
+          },
+        ];
+        //제이슨으로 응답을 받고 자바스크립트 객체로 변환한 후 어떠한 데이터처리 조작을 한 후에 dom에 추가
+        //데이터 + html문자열의 결합이 필요하기 때문에
+
+        const template = "<div>welcom ${data[0].name} !!";
+        console.log(template);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
